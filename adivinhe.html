@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Game: Palavra do dentista | Dentec</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="words.js" defer></script>
+    <script src="script10.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Host Grotesk", sans-serif;
+      }
+
+      .seila {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color:#ce117b ;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 600px;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        background:#ce117b;
+        border: 20px solid #ffb9d4;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        font-size: 30px;
+        color: white;
+        margin-bottom: 10px;
+        font-family: "League Spartan", sans-serif;
+        font-weight: 800;
+      }
+
+      .mike {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .content .word {
+        font-size: 28px;
+        letter-spacing: 15px;
+        color: white;
+        margin: 20px 0;
+        text-transform: uppercase;
+        font-family: "League Spartan", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase
+      }
+
+      .details p {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .content input {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px;
+        border: 2px solid #ffb9d4;
+        border-radius: 25px; /* Torna a caixa de texto oval */
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+        outline: none;
+      }
+
+      .content input:focus {
+        border-color: #ce117b;
+        box-shadow: 0 0 8px rgba(206, 17, 123, 0.4);
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .buttons button {
+        flex: 1;
+        height: 45px;
+        border: none;
+        border-radius: 25px;
+        background-color: #ffb9d4;
+        font-size: 14px;
+        font-family: "League Spartan", sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        color: #00000080;
+        font-weight: 800;
+      }
+
+      .buttons button:hover {
+        background-color: #ce117b;
+      }
+
+      .buttons button:active {
+        transform: scale(0.97);
+      }
+
+      /* Ajustes para telas menores */
+      @media screen and (max-width: 470px) {
+        .container {
+          width: 95%;
+        }
+
+        .container h2 {
+          font-size: 25px;
+        }
+
+        .content .word {
+          font-size: 24px;
+          letter-spacing: 10px;
+          text-transform: uppercase;
+        }
+
+        .details p {
+          font-size: 14px;
+        }
+
+        .content input {
+          height: 45px;
+          font-size: 14px;
+        }
+
+        .buttons button {
+          font-size: 13px;
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="seila">
+      <div class="container">
+        <img src="logo dentec.png" alt="Logo" class="logo" style="width: 20%; margin-bottom: 20px;">
+        <h2>PALAVRA DO DENTISTA</h2>
+        <p class="mike">Adivinhe a palavra embaralhada</p>
+        <div class="content">
+          <p class="word">_ _ _ _</p>
+          <div class="details">
+            <p class="hint">Dica: <span>Exemplo de dica</span></p>
+            <p class="time">Tempo restante: <span><b>30</b>s</span></p>
+          </div>
+          <input type="text" placeholder="Digite aqui">
+          <div class="buttons">
+            <button class="refresh-word">Trocar</button>
+            <button class="check-word">Checar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
